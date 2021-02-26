@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-void  Display(vector<int> &heap)
+void Display(vector<int> &heap)
 {
     for(int i=0;i<heap.size();i++){
         cout<<heap[i]<<" ";
@@ -60,6 +60,7 @@ void heapSort(vector<int> &heap)
         swap(heap[0],heap[i]);
         heapsize--;
         Downheapifyhelper(heap,0,heapsize);
+        Display(heap);
     }
     return;
 }
